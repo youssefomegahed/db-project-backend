@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const port = process.env.PORT || 8080;
 
-app.post("/", (req, res) => {
+app.get("/", (req, res) => {
   console.log("test");
   res.send("test");
 });
