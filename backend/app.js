@@ -5,7 +5,7 @@ const connection = require("./db");
 const fs = require("fs");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.post("/userAvailable", (req, res) => {
   var email = req.body.email;
